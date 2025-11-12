@@ -1,2 +1,2 @@
-# LINKD_docs
-Documents about LINKD app.
+# LINKN_docs
+Documents about Linkn app.
