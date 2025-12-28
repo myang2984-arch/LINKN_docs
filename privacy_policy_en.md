@@ -1,17 +1,17 @@
 # Privacy Policy
 
-**Application Name:** Linkn App
+**Application Name:** Linkn
 **Developer:** Miya.Yang
-**Effective Date:** November 11, 2025
-**Last Updated:** November 12, 2025
+**Effective Date:** December 28, 2025
+**Last Updated:** December 28, 2025
 
 ---
 
 ## Introduction
 
-Thank you for using Linkn App. We are committed to protecting your personal privacy and data security. This Privacy Policy details how we collect, use, store, and protect your personal information.
+Thank you for using Linkn. We are committed to protecting your personal privacy and data security. This Privacy Policy details how we collect, use, store, and protect your personal information.
 
-By using Linkn App, you consent to the data collection and usage practices described in this Privacy Policy.
+By using Linkn, you consent to the data collection and usage practices described in this Privacy Policy.
 
 ---
 
@@ -25,9 +25,9 @@ We collect the following information through Firebase Authentication services fo
 - **Login Timestamps**: Account creation and last login times
 
 ### 1.2 Notion Integration Information
-- **Notion Authorization Token**: Encrypted token authorized by you to access your Notion database
+- **Notion Authorization Token**: Token authorized by you to access your Notion database
 - **Notion Database ID**: Identifier of your chosen Notion database for synchronization
-- This token is stored securely in Firebase Firestore and used by Cloud Functions to perform synchronization
+- This token is stored in Firebase Firestore and used by Cloud Functions to perform synchronization
 
 ### 1.3 Link Metadata
 - **URLs**: Web links you capture or add
@@ -40,9 +40,10 @@ We collect the following information through Firebase Authentication services fo
 - **Device Type**: iOS, Android, or desktop platform information (used only for debugging and optimizing user experience)
 - **App Version**: Used for compatibility checks
 
-### 1.5 Usage Data (Optional)
-- **Crash Reports**: Anonymous technical information when the app crashes (requires user consent)
-- **Performance Data**: App loading times and response speeds (anonymized)
+### 1.5 Clipboard Content (with consent)
+- **Clipboard Text or URLs**: When you opt in, the iOS/macOS app briefly reads the current clipboard after you reopen Linkn to detect whether you recently copied a link.
+- **Share Extension Payloads**: When you save from another app via the Share Extension, the extension writes the link payload to a private `UIPasteboard` entry so the main app can pick it up.
+- **Storage**: Clipboard text stays in memory only long enough to detect a URL and is not uploaded or persisted unless you confirm the save.
 
 ---
 
@@ -51,7 +52,7 @@ We collect the following information through Firebase Authentication services fo
 We use the collected information solely for the following purposes:
 
 ### 2.1 Account Management
-- Verify your identity and manage your Linkn App account
+- Verify your identity and manage your Linkn account
 - Synchronize your account information across multiple devices
 
 ### 2.2 Provide Core Services
@@ -59,10 +60,11 @@ We use the collected information solely for the following purposes:
 - Implement three-way data synchronization between local device, Firebase Cloud, and Notion
 - Store your links, tags, and reading status
 
-### 2.3 AI Processing (Paid Feature)
-- Use your link metadata to call Google Gemini API
-- Provide intelligent tag suggestions and content summarization services
-- This is an optional paid feature requiring your explicit consent
+### 2.3 Clipboard Quick-Add
+- After you grant in-app consent, Linkn checks your clipboard on resume to see whether you just copied a URL
+- The permission dialog appears right after your first successful login, and you can decline without impacting other features
+- If a link is detected, we prompt you to save it; nothing is stored if you decline
+- You can revoke clipboard access anytime via **Settings → Privacy & Clipboard**
 
 ### 2.4 Customer Support
 - Respond to your inquiries and resolve technical issues
@@ -80,18 +82,13 @@ We use the collected information solely for the following purposes:
 
 #### Google Firebase
 - **Purpose**: Identity authentication, cloud data storage, real-time synchronization
-- **Data**: User UID, email, link metadata, Notion Token (encrypted)
+- **Data**: User UID, email, link metadata, Notion Token
 - **Privacy Policy**: [Firebase Privacy Policy](https://firebase.google.com/support/privacy)
 
 #### Notion API
 - **Purpose**: Synchronize links to your Notion database
 - **Data**: Link URLs, titles, descriptions, tags
 - **Privacy Policy**: [Notion Privacy Policy](https://www.notion.so/Privacy-Policy-3468d120cf614d4c9014c09f6adc9091)
-
-#### Google Gemini API (Optional Paid Feature)
-- **Purpose**: AI-powered summaries and tag suggestions
-- **Data**: Link URLs and metadata (excluding user identity information)
-- **Privacy Policy**: [Google AI Privacy Policy](https://policies.google.com/privacy)
 
 #### Apple Sign In (iOS Users)
 - **Purpose**: Identity authentication
@@ -110,17 +107,16 @@ We use the collected information solely for the following purposes:
 ### 4.1 Storage Location
 - **Cloud Storage**: All user data is stored in Google Firebase Cloud Firestore databases
 - **Data Centers**: Located in Google Cloud's United States region servers
-- **Local Storage**: Link metadata is encrypted and stored on devices using SQLite
+- **Local Storage**: Link metadata is stored on devices using SQLite
 
 ### 4.2 Security Measures
 - **Encrypted Transmission**: All data transmission uses HTTPS/TLS encryption
-- **Token Encryption**: Notion Tokens are encrypted before storage
 - **Access Control**: Firestore security rules ensure only you can access your own data
 - **Authentication**: Multi-factor authentication support based on Firebase Authentication
 
 ### 4.3 Data Retention Period
 - **Active Accounts**: Data will be retained until you delete your account or data
-- **Inactive Accounts**: Account data that has not been logged into for more than 2 years will be automatically deleted (with 30 days advance email notification)
+- **Linked Notion Content**: Items already synced to your own Notion workspace stay there under your control; deleting your Linkn account does not remove Notion data automatically
 
 ---
 
@@ -136,15 +132,19 @@ Under applicable data protection laws (including GDPR and CCPA), you have the fo
 
 ### 5.3 Right to Deletion
 - You can delete individual links or your entire account at any time
-- After account deletion, all associated data will be permanently deleted from our servers within 30 days
+- Once you confirm account deletion, your cloud data is erased immediately and cannot be recovered
 
 ### 5.4 Right to Data Portability
 - You can export all your link data in JSON or CSV format
 
 ### 5.5 Right to Object
-- You can opt out of optional data collection features (such as crash reports, AI features)
+- You can opt out of optional processing activities, including clipboard quick-add and any future analytics
 
-### 5.6 How to Exercise These Rights
+### 5.6 Clipboard Consent Control
+- You can opt in or out of clipboard quick-add at any time inside the app’s Settings page
+- Disabling clipboard access stops Linkn from reading your clipboard until you re-enable it
+
+### 5.7 How to Exercise These Rights
 Please contact us via email: **myang2984@gmail.com**
 
 ---
@@ -152,15 +152,14 @@ Please contact us via email: **myang2984@gmail.com**
 ## 6. Data Retention and Deletion
 
 ### 6.1 Account Deletion Process
-If you choose to delete your Linkn App account:
+If you choose to delete your Linkn account:
 
-1. **Immediate Deletion**: Firebase authentication account information and Firestore user data are immediately marked for deletion
-2. **30-Day Grace Period**: Data will be completely purged within 30 days (to prevent accidental deletion)
-3. **Permanent Deletion**: After 30 days, all data is unrecoverable
+1. **Immediate Deletion**: Firebase Authentication records, Firestore documents, and local SQLite caches are erased right away after you confirm deletion.
+2. **Irreversible**: The data removal cannot be undone. If you reopen Linkn, you will need to create a new account.
 
 ### 6.2 Scope of Deletion
-- **Included**: Email address, Notion Token, all link metadata, tags, reading status
-- **Not Included**: Data already synchronized to your Notion database (you need to manage this yourself)
+- **Included**: Email address, Notion Token, all link metadata stored in Linkn, tags, reading status
+- **Not Included**: Items that have already been synchronized to your personal Notion workspace. You remain in control of those entries and must delete them in Notion if needed.
 
 ### 6.3 Data Backup
 - We recommend exporting any needed data before deleting your account
@@ -170,7 +169,7 @@ If you choose to delete your Linkn App account:
 
 ## 7. Children's Privacy Protection
 
-Linkn App is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and discover that your child has provided us with personal information without your consent, please contact us and we will immediately delete such information.
+Linkn is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and discover that your child has provided us with personal information without your consent, please contact us and we will immediately delete such information.
 
 **Complies with COPPA (Children's Online Privacy Protection Act) requirements.**
 
@@ -178,7 +177,7 @@ Linkn App is not directed to children under the age of 13. We do not knowingly c
 
 ## 8. International Data Transfers
 
-Linkn App uses Firebase servers located in the United States. If you are located in the European Economic Area (EEA), United Kingdom, or other regions, your data may be transferred to locations outside your jurisdiction.
+Linkn uses Firebase servers located in the United States. If you are located in the European Economic Area (EEA), United Kingdom, or other regions, your data may be transferred to locations outside your jurisdiction.
 
 We ensure such transfers comply with applicable data protection laws and employ appropriate safeguards (such as Standard Contractual Clauses).
 
@@ -188,7 +187,6 @@ We ensure such transfers comply with applicable data protection laws and employ 
 
 ### 9.1 Technologies We Use
 - **Local Storage**: Uses SharedPreferences and SQLite to store user preference settings and link data
-- **Firebase Analytics**: Collects anonymous usage data to improve the app (can be disabled in settings)
 
 ### 9.2 Technologies We Do NOT Use
 - **Advertising Tracking**: Does not use advertising IDs or cross-app tracking
@@ -232,11 +230,11 @@ To exercise these rights, please contact: **myang2984@gmail.com**
 
 If you are an EU resident, under the General Data Protection Regulation (GDPR), our legal basis for processing your data is:
 
-- **Contract Performance**: To provide you with Linkn App services
+- **Contract Performance**: To provide you with Linkn services
 - **Legitimate Interests**: To improve services and prevent fraud
-- **Consent**: Optional features (such as AI processing) require your explicit consent
+- **Consent**: Optional features (such as clipboard quick-add) require your explicit consent
 
-You may withdraw consent at any time without affecting core contract-based services.
+You may withdraw consent (for example, clipboard quick-add) at any time without affecting core contract-based services.
 
 ---
 
@@ -276,4 +274,4 @@ In case of conflicting laws, the law providing stricter user privacy protection 
 
 **The latest version of this Privacy Policy will always be published here.**
 
-**Last Updated: November 12, 2025**
+**Last Updated: December 28, 2025**

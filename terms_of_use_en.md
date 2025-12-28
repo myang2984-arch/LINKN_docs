@@ -1,24 +1,24 @@
 # Terms of Use
 
-**Application Name:** Linkn App
+**Application Name:** Linkn
 **Developer:** Miya.Yang
-**Effective Date:** November 11, 2025
-**Last Updated:** November 12, 2025
+**Effective Date:** December 28, 2025
+**Last Updated:** December 28, 2025
 
 ---
 
 ## Introduction
 
-Welcome to Linkn App! These Terms of Use (the "Terms") constitute a legally binding agreement between you and the developer of Linkn App.
+Welcome to Linkn! These Terms of Use (the "Terms") constitute a legally binding agreement between you and the developer of Linkn.
 
-Please read these Terms carefully before using Linkn App. By downloading, installing, accessing, or using the Service, you agree to be bound by all provisions of these Terms.
+Please read these Terms carefully before using Linkn. By downloading, installing, accessing, or using the Service, you agree to be bound by all provisions of these Terms.
 
 ---
 
 ## 1. Acceptance of Terms
 
 ### 1.1 Agreement Consent
-By downloading, installing, or using Linkn App (the "Service"), you represent that:
+By downloading, installing, or using Linkn (the "Service"), you represent that:
 - You have read and understood these Terms of Use
 - You agree to comply with all provisions of these Terms of Use
 - You confirm that you are at least 13 years old (or the minimum age requirement in your jurisdiction)
@@ -36,19 +36,18 @@ Continued use of the Service constitutes acceptance of the modified Terms.
 ## 2. Service Description
 
 ### 2.1 Features
-Linkn App is a productivity tool designed to help users:
-- **Link Capture**: Quickly capture internet links (automatic clipboard monitoring on desktop, manual addition on mobile)
-- **Metadata Extraction**: Automatically retrieve page titles, descriptions, and icons
-- **Local Storage**: Store link data on devices using SQLite
+Linkn is a productivity tool designed to help users:
+- **Link Capture**: Save links from desktop clipboard monitoring, the iOS Share Extension, or manual entry
+- **Clipboard Quick-Add**: (with consent) Detect recently copied URLs when you return to the app and offer one-tap save
+- **Metadata Extraction**: Automatically retrieve page titles, descriptions, icons, and domains
+- **Local Storage**: Store link data on devices using SQLite for offline access
 - **Cloud Sync**: Multi-device data synchronization via Firebase Firestore
-- **Notion Integration**: Synchronize links to your Notion database as a reading list
-- **AI Features (Optional Paid)**: Use Google Gemini API to provide intelligent tags and summaries
+- **Notion Integration**: Push saved links to your Notion database as a reading list
 
 ### 2.2 Third-Party Dependencies
 This Service relies on the following third-party services for normal operation:
 - **Notion API**: For link synchronization functionality
 - **Google Firebase**: For authentication and cloud storage
-- **Google Gemini API**: For AI features (optional)
 
 We are not responsible for the availability, performance, or interruptions of third-party services.
 
@@ -65,8 +64,9 @@ You agree to:
 
 ### 3.2 Account Security
 You are responsible for:
-- Protecting the security of your account credentials (Google/Apple login information)
+- Protecting the security of your account credentials (Google/Apple login information or email/password)
 - Maintaining the confidentiality of your Notion authorization token (Integration Token) and database ID
+- Managing clipboard access permissions within the app (grant or revoke as needed)
 - Immediately notifying us of any unauthorized account use or security breaches
 - All activities conducted under your account
 
@@ -93,11 +93,12 @@ The following core features are permanently free:
 - Cloud multi-device synchronization
 - Basic Notion synchronization functionality
 
-### 4.2 Paid Features (Planned)
+### 4.2 Paid Features
 The following premium features require a paid subscription:
-- **AI Smart Summaries**: Generate link summaries using Google Gemini API
-- **AI Tag Suggestions**: Automatic categorization and tag recommendations
-- **Advanced Statistics**: Detailed reading statistics and data analysis
+- **Unlimited Link Saves**: Remove the daily limit of 3 new links
+- **Share From Any App**: Unlock the iOS Share Extension and clipboard automation
+- **Priority Metadata Enrichment**: Faster title/icon fetching plus smart tagging
+- **Live Notion Sync**: Real-time status mirroring between Linkn and Notion
 
 ### 4.3 Payment Terms
 - Subscription fees will be charged through Apple App Store or Google Play Store
@@ -105,10 +106,9 @@ The following premium features require a paid subscription:
 - Subscription management and cancellation are handled through your App Store/Play Store account settings
 
 ### 4.4 Refund Policy
-- **7-Day Money-Back Guarantee**: First-time subscribers may request a full refund within 7 days
-- **Refund Process**: Submit a refund request through App Store/Play Store, or contact our customer service email
-- **Prorated Refunds**: For annual subscriptions, you may receive a prorated refund based on remaining time upon cancellation (contact customer service)
-- Paid features will be immediately disabled upon refund
+- All payments and refunds are governed by the App Store/Play Store terms
+- If you believe a charge is incorrect, request a refund from the respective store or contact us and we will guide you through their process
+- When the store issues a refund, premium access ends immediately
 
 ---
 
@@ -116,10 +116,10 @@ The following premium features require a paid subscription:
 
 ### 5.1 App Ownership
 - All content, functionality, design, code, and intellectual property in the Service are owned by Miya.Yang
-- The "Linkn App" name and logo are our trademarks and may not be used without authorization
+- The "Linkn" name and logo are our trademarks and may not be used without authorization
 
 ### 5.2 User Content Ownership
-- You retain ownership of all links, tags, and data you add to Linkn App
+- You retain ownership of all links, tags, and data you add to Linkn
 - By using the Service, you grant us a limited license to store, process, and display your content to provide the Service
 
 ### 5.3 License Restrictions
@@ -138,10 +138,10 @@ The Service is provided on an "as is" and "as available" basis, without any expr
 - Any defects or errors will be corrected
 
 ### 6.2 Limitation of Liability
-To the maximum extent permitted by applicable law, Miya.Yang and Linkn App shall not be liable for:
+To the maximum extent permitted by applicable law, Miya.Yang and Linkn shall not be liable for:
 - Any direct, indirect, incidental, special, or consequential damages arising from use or inability to use the Service
 - Data loss, lost profits, or business interruption
-- Interruptions or failures of third-party services (Notion, Firebase, Gemini)
+- Interruptions or failures of third-party services (such as Notion or Firebase)
 - Unauthorized access to or modification of your data
 
 ### 6.3 Maximum Liability Cap
@@ -174,7 +174,7 @@ You may terminate your account at any time by:
 - Contacting our customer service email: myang2984@gmail.com
 
 After account deletion:
-- All your data will be permanently deleted from our servers within 30 days
+- All of your Linkn data is deleted from our servers immediately and cannot be recovered
 - Any active subscriptions will be canceled (processed according to refund policy)
 
 ### 8.2 Our Right to Terminate
@@ -242,7 +242,7 @@ If any part of these Terms is deemed invalid or unenforceable, that part will be
 
 ## 14. Entire Agreement
 
-These Terms, together with our Privacy Policy, constitute the entire agreement between you and Linkn App regarding use of the Service, and supersede all prior or contemporaneous oral or written agreements.
+These Terms, together with our Privacy Policy, constitute the entire agreement between you and Linkn regarding use of the Service, and supersede all prior or contemporaneous oral or written agreements.
 
 ---
 
@@ -263,6 +263,6 @@ These Terms are provided in Chinese and English. In case of inconsistency, the E
 
 **The latest version of these Terms of Use will always be published here.**
 
-**Thank you for using Linkn App!**
+**Thank you for using Linkn!**
 
-**Last Updated: November 12, 2025**
+**Last Updated: December 28, 2025**
