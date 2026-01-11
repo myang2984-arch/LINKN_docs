@@ -36,14 +36,21 @@ We collect the following information through Firebase Authentication services fo
 - **Custom Tags**: Classification tags you add
 - **Timestamps**: Link creation and last modification times
 
-### 1.4 Device Information
-- **Device Type**: iOS, Android, or desktop platform information (used only for debugging and optimizing user experience)
-- **App Version**: Used for compatibility checks
+### 1.4 Automatically Collected Technical Information
+- **Firebase Analytics Auto-Collection**: Google Firebase SDK may automatically collect basic technical information (such as device type, operating system version, app version) for service analytics and optimization
+- **Purchase Records**: When you make in-app purchases, we record the platform type (iOS/Android) for order management
+- **Data Processing**: This information is automatically processed by Firebase; we do not actively access, store, or use it for other purposes
 
 ### 1.5 Clipboard Content (with consent)
 - **Clipboard Text or URLs**: When you opt in, the iOS/macOS app briefly reads the current clipboard after you reopen Linkn to detect whether you recently copied a link.
 - **Share Extension Payloads**: When you save from another app via the Share Extension, the extension writes the link payload to a private `UIPasteboard` entry so the main app can pick it up.
 - **Storage**: Clipboard text stays in memory only long enough to detect a URL and is not uploaded or persisted unless you confirm the save.
+
+### 1.6 Email Subscription Information (Optional)
+- **Email Address**: When you opt-in to subscribe, we collect your email address
+- **Purpose**: Used solely to send you discount codes and subscription-related notifications
+- **Voluntary**: Subscription is completely voluntary and you can unsubscribe at any time
+- **Unsubscribe**: Each email includes an unsubscribe link for instant opt-out
 
 ---
 
@@ -66,11 +73,18 @@ We use the collected information solely for the following purposes:
 - If a link is detected, we prompt you to save it; nothing is stored if you decline
 - You can revoke clipboard access anytime via **Settings → Privacy & Clipboard**
 
-### 2.4 Customer Support
+### 2.4 Discount Codes and Notifications (Optional)
+- After you explicitly consent to subscribe, we will send you emails containing:
+  - Discount codes and special offers
+  - Subscription-related important notifications
+- Every email includes a one-click unsubscribe link that takes effect immediately
+- We will not use your email address for any other purposes or share it with third parties
+
+### 2.5 Customer Support
 - Respond to your inquiries and resolve technical issues
 - Diagnose and fix application errors
 
-### 2.5 Service Improvement
+### 2.6 Service Improvement
 - Analyze app usage patterns to improve user experience (using only anonymized aggregate data)
 - Develop new features and optimize existing functionality
 
