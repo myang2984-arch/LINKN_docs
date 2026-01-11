@@ -112,7 +112,7 @@ We use the collected information solely for the following purposes:
 ### 4.2 Security Measures
 - **Encrypted Transmission**: All data transmission uses HTTPS/TLS encryption
 - **Access Control**: Firestore security rules ensure only you can access your own data
-- **Authentication**: Multi-factor authentication support based on Firebase Authentication
+- **Authentication**: User accounts are secured using Firebase Authentication (email/password + Google/Apple sign-in)
 
 ### 4.3 Data Retention Period
 - **Active Accounts**: Data will be retained until you delete your account or data
@@ -125,7 +125,7 @@ We use the collected information solely for the following purposes:
 Under applicable data protection laws (including GDPR and CCPA), you have the following rights:
 
 ### 5.1 Right to Access
-- You can view and export all your data within the app at any time
+- You can view all your data within the app at any time
 
 ### 5.2 Right to Rectification
 - You can edit and update your link information and account settings within the app
@@ -135,7 +135,7 @@ Under applicable data protection laws (including GDPR and CCPA), you have the fo
 - Once you confirm account deletion, your cloud data is erased immediately and cannot be recovered
 
 ### 5.4 Right to Data Portability
-- You can export all your link data in JSON or CSV format
+- You may request an export of your link data by contacting us at **myang2984@gmail.com**
 
 ### 5.5 Right to Object
 - You can opt out of optional processing activities, including clipboard quick-add and any future analytics
@@ -162,7 +162,7 @@ If you choose to delete your Linkn account:
 - **Not Included**: Items that have already been synchronized to your personal Notion workspace. You remain in control of those entries and must delete them in Notion if needed.
 
 ### 6.3 Data Backup
-- We recommend exporting any needed data before deleting your account
+- We recommend backing up any needed data before deleting your account
 - Data cannot be recovered after deletion
 
 ---
