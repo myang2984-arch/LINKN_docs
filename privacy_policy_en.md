@@ -25,9 +25,9 @@ We collect the following information through Firebase Authentication services fo
 - **Login Timestamps**: Account creation and last login times
 
 ### 1.2 Notion Integration Information
-- **Notion Authorization Token**: Token authorized by you to access your Notion database
-- **Notion Database ID**: Identifier of your chosen Notion database for synchronization
-- This token is stored in Firebase Firestore and used by Cloud Functions to perform synchronization
+- **Notion OAuth Authorization**: When you connect Notion, you are redirected to Notion's official OAuth page to grant access. We never see or store your Notion password.
+- **Notion Access Token**: The OAuth access token issued by Notion is stored exclusively on our Firebase Cloud Functions server and is never transmitted to your device.
+- **Notion Workspace and Database**: After authorization, you select which Notion database to sync with. The selected database identifier is stored in Firebase Firestore and used by Cloud Functions to perform synchronization.
 
 ### 1.3 Link Metadata
 - **URLs**: Web links you capture or add
@@ -96,7 +96,7 @@ We use the collected information solely for the following purposes:
 
 #### Google Firebase
 - **Purpose**: Identity authentication, cloud data storage, real-time synchronization
-- **Data**: User UID, email, link metadata, Notion Token
+- **Data**: User UID, email, link metadata, Notion OAuth access token (server-side only)
 - **Privacy Policy**: [Firebase Privacy Policy](https://firebase.google.com/support/privacy)
 
 #### Notion API
@@ -172,7 +172,7 @@ If you choose to delete your Linkn account:
 2. **Irreversible**: The data removal cannot be undone. If you reopen Linkn, you will need to create a new account.
 
 ### 6.2 Scope of Deletion
-- **Included**: Email address, Notion Token, all link metadata stored in Linkn, tags, reading status
+- **Included**: Email address, Notion OAuth access token (server-side), all link metadata stored in Linkn, tags, reading status
 - **Not Included**: Items that have already been synchronized to your personal Notion workspace. You remain in control of those entries and must delete them in Notion if needed.
 
 ### 6.3 Data Backup
@@ -288,4 +288,4 @@ In case of conflicting laws, the law providing stricter user privacy protection 
 
 **The latest version of this Privacy Policy will always be published here.**
 
-**Last Updated: December 28, 2025**
+**Last Updated: April 19, 2026**

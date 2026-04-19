@@ -65,7 +65,6 @@ You agree to:
 ### 3.2 Account Security
 You are responsible for:
 - Protecting the security of your account credentials (Google/Apple login information or email/password)
-- Maintaining the confidentiality of your Notion authorization token (Integration Token) and database ID
 - Managing clipboard access permissions within the app (grant or revoke as needed)
 - Immediately notifying us of any unauthorized account use or security breaches
 - All activities conducted under your account
@@ -265,4 +264,4 @@ These Terms are provided in Chinese and English. In case of inconsistency, the E
 
 **Thank you for using Linkn!**
 
-**Last Updated: December 28, 2025**
+**Last Updated: April 19, 2026**
